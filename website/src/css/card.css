@@ -1,0 +1,17 @@
+.main-card{
+    width: 100%;
+    padding: 15px;
+    height:fit-content;
+}
+
+.main-card .card-left{
+    border: 1px solid;
+    height: 500px;
+    padding: 5px;    
+}
+
+.main-card .card-right{
+    border: 1px solid;
+    height: 500px;
+    padding: 5px;
+}
