@@ -20,3 +20,14 @@
 table tr td {
     padding: 10px;
 }
+
+.btn-buy{
+    background-color: rgb(34, 155, 212);
+}
+
+.btn-book{
+   background-color: rgb(19, 78, 143);
+}
+.btn-buy, .btn-book :hover{
+    opacity: 0.8;
+}

@@ -39,11 +39,11 @@
                         <i class="fa fa-user" aria-hidden="true" style="font-size: 24px;"></i>
                     </button>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <button class="btn btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3 ml-2">
-                        <a href="/src/shopping-card.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                     </button>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -54,41 +54,37 @@
             <div class="row" id="inforProduct">
                 <div class="left col-6" id="imgPreview">
                     <div class="img" id="xyz"></div>
-                    <div class="select row">
-                        <div class="col-6">1</div>
-                        <div class="col-6">2</div>
-                    </div>
                 </div>
-                <div class="right col-6" style="background-color: #fff;">
+                <div class="right col-6" style="background-color: #fff;" style="padding-right: 0; padding-left: 0;">
                     <table>
                         <tr>
                             <td>Kích Thước:</td>
-                            <td>160 x 200</td>
+                            <td id="size">160 x 200</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <button>160 x 200</button>
-                                <button>10 x 220</button>
+                                <button onclick="bind(event, 'size')">160 x 200</button>
+                                <button  onclick="bind(event, 'size')">10 x 220</button>
                             </td>
 
                         </tr>
                         <tr>
                             <td>Giá</td>
                             <td>
-                                1,689,000 ₫
+                                <strong>1,689,000 ₫</strong>
                                 <strike>    2,249,000 ₫</strike>
                             </td>
                         </tr>
                         <tr>
                             <td>Màu Sắc:</td>
-                            <td>THTC0016/1-1</td>
+                            <td id="color">THTC0016/1-1</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <button>THTC0016/1-1</button>
-                                <button>THTC0016/1-2</button>
+                                <button onclick="bind(event, 'color')">THTC0016/1-1</button>
+                                <button onclick="bind(event, 'color')">THTC0016/1-2</button>
                             </td>
                         </tr>
                         <tr>
@@ -97,7 +93,79 @@
                                 <button onclick="subtract()">-</button><span id="quantity" class="p-2">1</span><button onclick="add()">+</button>
                             </td>
                         </tr>
+                        
                     </table>
+                    <div class="text-center row">
+                        <div class="col-lg-6 col-md-12 mt-md-1">
+                            <button class="pt-2 pb-2 btn-buy" style="outline: none; border: none; width: 250px;">Mua ngay</button>
+                        </div>
+                        <div class="col-lg-6  col-md-12 mt-md-1">
+                            <button class="pt-2 pb-2 btn-book" style="outline: none; border: none; width: 250px;">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <strong>Chi tiết sản phẩm:</strong>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, ipsum qui? Eum, fugit iste. Odit atque magni, aliquid rem reiciendis non, assumenda voluptatibus optio inventore, molestias ad possimus! Quos, aut!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <h2 class="pd-1 ml-1">Sản Phẩm Liên Quan</h2>
+            <div class="container-fluid">
+                <div class="row mb-3">
+                    <div class="mt-1 col col-md-4 col-sm-6 col-lg-3 product">
+                        <a href="#" class="text-decoration-none"></a>
+                            <div class="card position-relative" style="width: 18rem;">
+                                <img src="https://api.thienhaco.com.vn/upload/THUMB-NEMTHC-1610598779452-drap8.jpg" class="card-img-top" alt="...">
+                                <span id="flash" class="position-absolute">Giảm 25%</span>
+                                <div class="card-body center">
+                                    <h5 class="card-title">Bộ Tencel THTC0015/2 </h5>
+                                    <div class="d-flex justify-content-center"><p class="card-text mr-2">150 - 200 cm</p><p class="text-danger">300.000 VND</p></div>
+                                    <div class="d-flex d-flex justify-content-center"><p class="card-text mr-2">200 - 250 cm</p><p class="text-danger">300.000 VND</p></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mt-1 col col-md-4 col-sm-6 col-lg-3 product">
+                        <a href="#" class="text-decoration-none"></a>
+                            <div class="card position-relative" style="width: 18rem;">
+                                <img src="https://api.thienhaco.com.vn/upload/THUMB-NEMTHC-1593835075761-074.jpg" class="card-img-top" alt="...">
+                                <span id="flash" class="position-absolute">Giảm 25%</span>
+                                <div class="card-body center">
+                                    <h5 class="card-title">Bộ Tencel THTC0015/2 </h5>
+                                    <div class="d-flex justify-content-center"><p class="card-text mr-2">150 - 200 cm</p><p class="text-danger">300.000 VND</p></div>
+                                    <div class="d-flex d-flex justify-content-center"><p class="card-text mr-2">200 - 250 cm</p><p class="text-danger">300.000 VND</p></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mt-1 col col-md-4 col-sm-6 col-lg-3 product">
+                        <a href="#" class="text-decoration-none"></a>
+                            <div class="card position-relative" style="width: 18rem;">
+                                <img src="https://api.thienhaco.com.vn/upload/THUMB-NEMTHC-1593834995431-049.jpg" class="card-img-top" alt="...">
+                                <span id="flash" class="position-absolute">Giảm 25%</span>
+                                <div class="card-body center">
+                                    <h5 class="card-title">Bộ Tencel THTC0015/2 </h5>
+                                    <div class="d-flex justify-content-center"><p class="card-text mr-2">150 - 200 cm</p><p class="text-danger">300.000 VND</p></div>
+                                    <div class="d-flex d-flex justify-content-center"><p class="card-text mr-2">200 - 250 cm</p><p class="text-danger">300.000 VND</p></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mt-1 col col-md-4 col-sm-6 col-lg-3 product">
+                        <a href="#" class="text-decoration-none"></a>
+                            <div class="card position-relative" style="width: 18rem;">
+                                <img src="https://api.thienhaco.com.vn/upload/THUMB-NEMTHC-1594091895197-LXRS 071.jpg" class="card-img-top" alt="...">
+                                <span id="flash" class="position-absolute">Giảm 25%</span>
+                                <div class="card-body center">
+                                    <h5 class="card-title">Bộ Tencel THTC0015/2 </h5>
+                                    <div class="d-flex justify-content-center"><p class="card-text mr-2">150 - 200 cm</p><p class="text-danger">300.000 VND</p></div>
+                                    <div class="d-flex d-flex justify-content-center"><p class="card-text mr-2">200 - 250 cm</p><p class="text-danger">300.000 VND</p></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

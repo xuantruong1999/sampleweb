@@ -34,3 +34,10 @@ function subtract(){
         $("#quantity").html(newValue);
     }
 }
+
+function bind(event, id){
+    debugger
+    let content = event.toElement.innerText;
+    let selector = "#"+ id; 
+    $(selector).html(content);
+}
