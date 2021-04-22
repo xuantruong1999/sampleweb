@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/card.css" />
+    <link rel="stylesheet" href="./css/detail.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/detail.js"></script>
     <title>Website </title>
 </head>
 <body data-new-gr-c-s-check-loaded="14.1006.0" data-gr-ext-installed="">
@@ -48,19 +50,66 @@
           </nav>
     </header>
     <main>
-        <div class="container">
-            <div class="row main-card">
-                <div class="col-8 card-left"></div>
-                <div class="col-4 card-right"></div>
+        <div class="container mt-3 p-2 border" style="background-color: rgb(239, 240, 245);">
+            <div class="row" id="inforProduct">
+                <div class="left col-6" id="imgPreview">
+                    <div class="img" id="xyz"></div>
+                    <div class="select row">
+                        <div class="col-6">1</div>
+                        <div class="col-6">2</div>
+                    </div>
+                </div>
+                <div class="right col-6" style="background-color: #fff;">
+                    <table>
+                        <tr>
+                            <td>Kích Thước:</td>
+                            <td>160 x 200</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button>160 x 200</button>
+                                <button>10 x 220</button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>Giá</td>
+                            <td>
+                                1,689,000 ₫
+                                <strike>    2,249,000 ₫</strike>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Màu Sắc:</td>
+                            <td>THTC0016/1-1</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button>THTC0016/1-1</button>
+                                <button>THTC0016/1-2</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Số Lượng</td>
+                            <td>
+                                <button onclick="subtract()">-</button><span id="quantity" class="p-2">1</span><button onclick="add()">+</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
-        <hr class="featurette-divider">
-    
+        <div class="container">
+            <hr class="featurette-divider">
+        </div>
         <!-- FOOTER -->
         <footer class="container text-center">
             <p class="float-end"><a href="#">Back to top</a></p>
             <p>© 2017–2021 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
         </footer>
     </main>
+
 </body>
 </html>

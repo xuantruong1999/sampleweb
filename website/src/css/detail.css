@@ -1,0 +1,22 @@
+#inforProduct{
+    height: auto;
+    width: 100%;
+}
+
+#imgPreview{
+    width: 500px;
+    height: 500px;
+}
+
+#imgPreview div.img{
+    background: url("https://api.thienhaco.com.vn/upload/NEMTHC-1609983205122-1.1.jpg");
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+}
+
+table tr td {
+    padding: 10px;
+}
